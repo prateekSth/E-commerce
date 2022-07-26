@@ -1,0 +1,409 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color:rgb(177, 15, 29);
+}
+h2{
+    font-size: 30px;
+    font: bold;
+}
+h4{
+    font-size: 20spx;
+    
+}
+h6{
+    font-size: 15px;
+    color:rgb(25, 26, 27);
+}
+p{
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+.section-p1{
+    padding: 30px 30px;
+}
+.section-m1{
+    margin: 40px 0;
+}
+body{
+    width: 100%;
+    background-color:#E3E6F3;
+}
+
+/*Header Start*/
+#header{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color:#E3E6F3;
+    box-shadow: 0 5px 15px rgba(224, 218, 218, 0.6);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0%;
+}
+#header a img{
+    width: auto;
+    object-fit:contain;
+    height: 10vh;
+}
+.navbar{
+    display: inline-flex;
+}
+.navbar li{
+    font-size: 30px;
+    list-style: none;
+    margin-left: 40px;
+}
+.navbar li a{
+    font-size: 20px;
+    font-weight: 800;
+    color:rgb(102, 106, 109);
+    text-decoration: none;
+    position: relative;
+    letter-spacing: 0.1cm;
+}
+.navbar li a.active{
+    color: #ff3c78;
+}
+.navbar li a::before{
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color:#ff3c78;
+    width: 0%;
+    right: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.navbar li a::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color:#ff3c78;
+    width: 0%;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s ease-in-out;
+}
+.navbar li a:hover::before,
+.navbar li a:hover::after{
+    width: 100%;
+}
+
+.navbar li a:hover{
+    color:#ff3c78;
+}
+
+/*Hero section*/
+#hero{
+    background-image: url(img/hero4.png);
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 20% right 10%;
+    padding:0 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    
+}
+button{
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 30px;
+    font-weight: 900;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 30px;
+}
+button:hover{
+    color: white;
+    background-color: crimson;
+    transition: 0.5s ease;
+    border-color: crimson;
+    line-height: 30px;
+    
+}
+#feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#feature .fa-box{
+    width: 150px;
+    text-align: center;
+    padding: 15px, 10px;
+    box-shadow: 20px 20px 35px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 15px 0;
+}
+#feature .fa-box:hover{
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.1);
+}
+#feature .fa-box h6{
+    padding:9px 10px;
+    line-height: 1;
+    font-family: 'Times New Roman', Times, serif;
+    color: #099178;
+    margin: 5px 10px 10px;
+    border-radius: 4px;
+    background-color: #fddde4;
+    font-size: 12px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+#product{
+    text-align: center;
+}
+#product .product-container{
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#product .prod{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #E3E6F3;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+#product .prod:hover{
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.08);
+}
+#product .prod img{
+    width: 100%;
+    border-radius: 20px;
+}
+#product .prod .description{
+    text-align: start;
+    padding: 10px 0;
+}
+#product .prod .description span{
+    color: #62593b5b;
+    font-size: 12px;
+    font-weight: 700;
+}
+#product .prod .description h5{
+    padding-top: 7px;
+    color: rgb(50, 52, 52);
+    font-size: 14px;
+}
+#product .prod .description i{
+    font-size: 12px;
+    color: #FFD700;
+}
+#product .prod .description h4{
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #0c9045;
+}
+#product .prod .cart{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50px;
+    background-color: #f8f8f9;
+    font-weight: 500px;
+    color: #0c9045;
+    border: 1px solid #cce7d0;
+    position: absolute;
+    bottom: 20px;
+    right: 15px;
+    transition: 0.5s ease;
+
+}
+#product .prod .cart:hover{
+    height:35px;
+    width: 35px;
+    line-height: 35px;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);
+
+}
+
+#banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url(img/banner/b2.jpg);
+    background-position: center;
+    background-size: center;
+    height: 50vh;
+}
+#banner h3{
+    color: white;
+    margin: 20px 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 300;
+}
+#banner h2{
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 0.1ch;
+    margin-right: 100px;
+    
+}
+#banner h2 span{
+    color: crimson;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+#banner button{
+    margin-bottom: 20px;
+}
+#sm-banner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#sm-banner .banner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-width: 580px;
+    background: url(img/banner/b17.jpg);
+    background-position: center;
+    background-size: center;
+    height: 50vh;
+    padding: 20px; 
+} 
+#sm-banner h4{
+    color: #f8f8f9;
+    font-size: 20px;
+    font-weight: 300;
+}
+#sm-banner h2{
+    color: #f8f8f9;
+    font-size: 28px;
+    font-weight: 500;
+}
+#sm-banner span{
+    color: #f8f8f9;
+    font-size: 15px;
+    font-weight: 200;
+}
+
+.button-white{
+    border-radius: 10px;
+    margin-top: 30px;
+    font-weight: 900;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 30px;
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    border: 1px solid #fff;
+    transition: 0.2s ease;
+    padding:10 20px;
+}
+.button-white:hover{
+    background-color: #0c9045;
+    border: 1px solid transparent;
+}
+#sm-banner .banner-box1{
+    background: url(img/banner/b10.jpg);
+}
+
+
+
+#banner-3{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 30px;
+}
+#banner-3 .banner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-width: 30%;
+    background: url(img/banner/b7.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 30vh;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+#banner-3 .banner-box2{
+    background-image: url(img/banner/b4.jpg);
+
+}
+#banner-3 .banner-box3{
+    background-image: url(img/banner/b18.jpg);
+}
+#banner-3 h2{
+    color: white;
+    font-weight: 600;
+}
+#banner-3 h3{
+    color: white;
+    font-weight: 600;
+}
+
+#newsletter{
+    display: flex;
+    justify-content: space-around;
+    background-image: url(img/banner/b17.jpg);
+    background-repeat: no-repeat;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    
+}
+#newsletter .newstep{
+    padding: 40px 0;
+}
+#newsletter .newstep .h1,h2{
+    color: white;
+    font-weight: 500px;
+    align-items: center;
+}
+#newsletter .form{
+    justify-content: space-between;
+}
+#newsletter .form input{
+    line-height: 40px;
+    width: 300px;
+    margin-right: 30px;
+    letter-spacing: 0.7px;
+}
+#newsletter .form button{
+    padding: 10px 40px;
+    letter-spacing: 0.51px;
+    background: transparent;
+
+}
+.copyright{
+    background-color: black;
+    color: white;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+    font-weight: bold;
+
+}
+
+
